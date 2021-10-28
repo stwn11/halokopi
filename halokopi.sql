@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2021 at 12:56 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.13
+-- Waktu pembuatan: 28 Okt 2021 pada 12.30
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `akun`
+-- Struktur dari tabel `akun`
 --
 
 CREATE TABLE `akun` (
@@ -40,17 +40,17 @@ CREATE TABLE `akun` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `akun`
+-- Dumping data untuk tabel `akun`
 --
 
 INSERT INTO `akun` (`id`, `foto`, `nama_lengkap`, `email`, `no_whatsapp`, `password`, `waktu`, `tipe_daftar`, `tipe_akun`) VALUES
-(14, '1631191185.png', 'User Biasa', 'user@gmail.com', '085381259307', '$2y$10$uDy0.tHRpB0alUAAwL.1XOT/f3Y6O4SfIZ28rnhyyRlkEgacqimPu', '2021-06-18 16:20:48', '', ''),
-(15, '1631188751.png', 'Administrator', 'admin@gmail.com', '082377823390', '$2y$10$ivlVrsDRBVq7ZDlsBcLj7eJ2B8RlEY9cVNnNk.H0kkoQxP6b6PSBu', '2021-07-11 01:18:30', '', 'Admin');
+(14, '1635395222.png', 'User', 'user@gmail.com', '0123456789', '$2y$10$uDy0.tHRpB0alUAAwL.1XOT/f3Y6O4SfIZ28rnhyyRlkEgacqimPu', '2021-06-18 16:20:48', '', ''),
+(15, '1635395184.png', 'Administrator', 'admin@gmail.com', '0812345678910', '$2y$10$ivlVrsDRBVq7ZDlsBcLj7eJ2B8RlEY9cVNnNk.H0kkoQxP6b6PSBu', '2021-07-11 01:18:30', '', 'Admin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `banner_promo`
+-- Struktur dari tabel `banner_promo`
 --
 
 CREATE TABLE `banner_promo` (
@@ -60,18 +60,19 @@ CREATE TABLE `banner_promo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `banner_promo`
+-- Dumping data untuk tabel `banner_promo`
 --
 
 INSERT INTO `banner_promo` (`idbanner`, `image`, `status`) VALUES
-(22, '743a07a135739835dd71e195dbcc2e15.jpg', ''),
-(23, 'ace11ebe998dbf07038d40b74967a3c0.png', ''),
-(24, '69c8982faa69fb6b375fc52b8d98e971.png', '');
+(32, '26a5d7920c99cf4b2f62e423ef9608e7.jpg', ''),
+(33, '3db0dc28f880920b94d544b110772558.jpg', ''),
+(34, '66e80e0b20b73dee4f51aacc3e305825.jpg', ''),
+(35, '1f06b103a5176afd4302362c973f706e.jpg', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `flashsale`
+-- Struktur dari tabel `flashsale`
 --
 
 CREATE TABLE `flashsale` (
@@ -80,16 +81,16 @@ CREATE TABLE `flashsale` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `flashsale`
+-- Dumping data untuk tabel `flashsale`
 --
 
 INSERT INTO `flashsale` (`id_fs`, `waktu_berakhir`) VALUES
-(1, '1659110400');
+(1, '1643475600');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `iklan`
+-- Struktur dari tabel `iklan`
 --
 
 CREATE TABLE `iklan` (
@@ -110,32 +111,10 @@ CREATE TABLE `iklan` (
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `iklan`
---
-
-INSERT INTO `iklan` (`id`, `id_kategori`, `gambar`, `judul`, `harga`, `deskripsi`, `berat`, `warna`, `ukuran`, `stok`, `terjual`, `diskon`, `tipe_iklan`, `waktu`, `status`) VALUES
-(18, 1, '1623598275-1.jpg,1623598275-2.jpg', 'LED TV LG 32 Inch Digital 32LM550BPTA Garansi Resmi', 2000000, 'Product Name : 32LM550BPTA LED TV 32 Inch DIGITAL - TERBARU MODEL 2019 \nGaransi Resmi LG 1 Tahun\nBerat Unit : 11 Kg\n\nSpesifikasi:\n- LED TV Digital 32 Inch\n- Screen Resolution : 1366 x 768 HD Ready\n- USB : 1 ( Sudah bisa USB Movie )\n- HDMI : 2\n- RCA : Yes\n- Dynamic Color Enhancer \n- Resolution Upscaler\n- Virtual Surround \n- Clear Voice\n- 2.0 Channel/10 W\n- Quick Access', 11000, '', '', 10, 2, 0, '', '2021-06-13 17:31:14', ''),
-(19, 1, '1623598969-1.jpg,1623598969-2.jpg', 'Sharp Rice Cooker/ Magic Comb 3in1 1.8L KSN18MGSL', 289000, 'Sharp Rice Cooker 1.8 Liter Silver - KSN18MGSL Kapasitasnya yang besar, yaitu 1.8 liter dapat membuat sampai hingga 7 porsi mangkuk nasi setiap hari. Sharp Rice Cooker 1.8 Liter Silver - KSN18MGSL juga terdapat aksesoris tambahan berupa alat pengukus, gelas ukur, dan sendok nasi.\n\nProduct Description\nSharp Rice Cooker 1.8 Liter Silver – KS N18MGSL, rice cooker Sharp dengan desainnya yang modern dan memukau membuat nuansa di dapur anda semakin lebih stylish. Anda pun dapat membuat kukusan kue serta menghangatkan makanan kembali dengan mudah.\n\nMechanical Type\nPenanak nasi dengan tipe panel mekanikal yang memudahkan pengguna saat memasak nasi.\n\nThick & Non-Sticking Inner Pot\nDengan panci tebal berukuran 1.0mm, tidak lengket dan sehat.\n\n3D Keep Warm\nFungsi penghangat yang berbeda dari rice cooker pada umumnya dengan penghangatan melalui 3 sisi yaitu penghangat atas, samping dan bawah.\n\nIndication Lights\nDilengkapi dengan 2 lampu indicator yang berguna untuk menunjukan proses memasak dan menghangatkan, kuning untuk memasak dan hijau untuk menghangatkan.\n\nProduct Information\nKapasitas : 1.8 Liter\n\nSpesifikasi\nNama Produk : Sharp Rice Cooker\nTipe : KS-N18MG-SL\nBahan Material : Plastik\nPanjang Kabel : 1 Meter\nKapasitas : 1.8 Liter\nDaya\nMemasak : 400 Watt\nMenghangatkan : 60 Watt\nTegangan : 220 Volt / 50 Hz\nDimensi (P x L x T) : 28.2 cm x 28.9 cm x 29 cm\nBerat : 4 Kg\nWarna : Silver\nAksesoris\nplastic steam tray\nrice paddle\nmeasuring cup\nrice scoop\nPengaturan Waktu : Tidak\nTersedia Pegangan Panci : Tidak', 5000, '', '', 25, 20, 12, 'flash sale', '2021-06-13 17:42:48', ''),
-(20, 1, '1623599140-1.jpg', 'Cosmos Stand Fan 16 SDB (16 Inch)', 222000, 'Jenis: Stand Fan/Berdiri\nMaterial Kipas: Plastik\nDiameter: 16 Inch (40 cm)\nDaya: 46 Watt\nVoltase: 220 V ~ 50 Hz\nDimensi: 62 x 52 x 15 cm\nPengaturan Kecepatan: 3 Mode Kecepatan\nGaransi Resmi (Motor): 1 Tahun (Motor 5 Tahun)\nBarang Asli\nBersertifikat SNI\nMotor Handal\nSuara Halus\nDaya Listrik Rendah\nDesain Minimalis\nWarna Cantik\nBaling-baling Lebih Besar (16 Inch)\nSekring Pengaman Panas (Thermofuse)\nSistim Pelumasan Otomatis\nBaling-baling Super Spread: Angin menyebar lebih merata\nGaransi Resmi\n\nKipas Angin Cosmos memang terkenal kualitasnya yang sangat baik, apalagi dengan Cosmos 16-SDB ini. Tampil sangat menawan dengan warna putih-hijaunya. Kipas Angin Cosmos 16-SDB adalah tipe kipas angin berdiri dengan harga yang cukup terjangkau di pasaran. Kipas angin ini memiliki berbagai kelebihan dibandingkan dengan kipas angin lainnya. Diantaranya lebih tahan lama dan kinerjanya menggunakan daya listrik yang cukup kecil.\nKonsumsi daya kipas angin adalah 46 Watt. Kipas angin dengan ukuran 16 inch ini menawarkan 3 pilihan kecepatan yang dapat Anda putar sesuai keinginan Anda. Selain fitur di atas ada kelebihan kipas angin Cosmos di bandingkan dengan kipas lainnya, yaitu desainnya minimalis. Tentu saja kipas angin ini akan mempercantik ruangan Anda.', 6000, '', '', 100, 10, 0, '', '2021-06-13 17:45:40', ''),
-(21, 2, '1623601193-1.jpg,1623601193-2.jpeg', 'ASUS ROG Strix G512LI-I565B6T', 15000000, 'Display : 15.6\"FHD(1920 x 1080) 3MS 144Hz Value IPS-level 250nits\nProcessor : Intel® Core i5-10300H Processor (8M Cache, up to 4.50 GHz)\nMemory : 8GB DDR4-3200 MHz\nStorage : 512GB SSD\nGraphics : NVIDIA GeForce GTX1650Ti 4GB GDDR6\nOperating System : Windows 10 HOME\nAudio : ASUS Technology\nNetworking : Wi-Fi  802.11ax+Bluetooth 5.0\nSlots/Interface :\n3 x USB3.2 Gen 1 Type-A\n1 X USB3.2 Gen2 Type-C (support Display Port)\n1x LAN RJ-45 jack\n1 x HDMI 2.0b\n1 x Audio combo jack: Mic-in and Head phone\nBattery : 48WHrs, 3S1P, 3-cell Li-ion\nSystem Dimensions : 360 x 275 x 21~25.8\nWeight: 2.39 kg', 3000, '', '', 25, 8, 0, '', '2021-06-13 18:19:52', ''),
-(22, 2, '1623601365-1.jpg,1623601365-2.jpg,1623601365-3.jpg', 'Macbook Pro M1 Chip 512GB MYD92 MYDC2 RESMI IBOX', 22000000, '- Mohon Teliti sebelum membeli, kesalahan dalam pembelian bukan tanggung jawab Merchant\n\n- Produk yang sudah dibeli TIDAK BISA DITUKAR apalagi DIKEMBALIKAN\n\n- SEBELUM MEMBUKA segel/kemasan,PASTIKAN PRODUK yang diterima sudah SESUAI PESANAN (KOMPLAIN SETELAH BUKA SEGEL TIDAK KAMI LAYANI)\n\n- DENGAN MEMBELI ANDA SETUJU DENGAN SYARAT DAN KETENTUAN SERTA MEMBEBASKAN PENJUAL DARI SEGALA TUNTUTAN GANTI RUGI\n\n \n\n• Key Features\n\n•  Apple M1 8-Core CPU\n\n•  8GB Unified RAM | 512GB SSD\n\n•  13.3\" 2560 x 1600 IPS Retina Display\n\n•  8-Core GPU | 16-Core Neural Engine\n\n•  P3 Color Gamut | True Tone Technology\n\n•  Wi-Fi 6 (802.11ax) | Bluetooth 5.0\n\n•  Touch Bar | Touch ID Sensor\n\n•  2 x Thunderbolt 3 / USB4 Ports\n\n•  Magic Keyboard | Force Touch Trackpad\n\n•  macOS', 1500, '', '', 10, 3, 0, '', '2021-06-13 18:22:44', ''),
-(23, 3, '1623601647-1.jpg,1623601647-2.jpg,1623601647-3.jpg', 'Apple iPhone 12 Smartphone [128GB]', 13500000, 'OS :iOS 14\nChip :A14 Bionic chip with next-generation Neural Engine\nDisplay :6.1-inch Super Retina XDR display with True Tone\nCapacity :64GB, 128GB, 256GB\nHeight :5.78 inches (146.7 mm)\nWidth :2.82 inches (71.5 mm)\nDepth :0.29 inch (7.4 mm)\nWeight :5.78 ounces (164 grams)\nCamera & Video :Dual 12MP cameras with Portrait mode, Depth Control, Portrait Lighting, Smart HDR, and 4K Dolby Vision HDR video up to 30 fps\nFront Camera :12MP TrueDepth front camera with Portrait mode, Depth Control, Portrait Lighting, and Smart HDR 3\nPower & Battery :\nVideo playback: Up to 17 hours\nVideo playback (streamed): Up to 11 hours\nAudio playback: Up to 65 hours\nFast-charge capable: Up to 50% charge in around 30 minutes with 20W adapter or higher Splash, Water, and Dust Resistant :All-glass and surgical-grade stainless steel design, water and dust resistant (rated IP68)', 600, '', '', 5, 2, 10, 'flash sale', '2021-06-13 18:27:27', ''),
-(24, 3, '1623601820-1.jpg,1623601820-2.jpg,1623601820-3.jpeg', 'SAMSUNG GALAXY S21 ULTRA (RAM 12/ 256GB) - Garansi Resmi', 16500000, '• 1. Galaxy S21 Ultra 5G’s screen size is 6.8\" in the full rectangle and 6.6\" with accounting for the rounded corners; actual viewable area is less due to the rounded corners and camera hole.\n• 2. 100X Space Zoom includes 10x Optic Zoom and goes up to 100x Super Resolution Zoom. Super Resolution Zoom includes digital zoom\n• 4. Typical value tested under third-party laboratory condition.4855mAh', 600, '', '', 20, 1, 0, '', '2021-06-13 18:30:20', ''),
-(25, 4, '1623602033-1.jpg', 'pakaian pria lengan panjang keren - atasan baju jeans tebal - kemeja jeans lengan panjang - baju pesta kondangan laki laki cowok murah kekinian', 137000, 'HAI COSTUMER\n\nORDER\n\nWAJIB CANTUMKAN CADANGAN UKURAN DAN WARNA DI CATATAN PEMBELIAN ATAU TINGGALKAN PESAN DI CHAT INBOX YA\n\nPRODUK DI TOKO MENCAPAI RATUSAN NIH JADI KITA TIDAK BISA EDIT SATU PERSATU SETIAP HARI YA KA\n\nDAN JIKA ADA WARNA DAN UKURAN YANG TIDAK ADA PUN AKAN ADMIN INFO BY CHAT\n\nJIKA BY CHAT 1X24JAM TIDAK ADA INFO JUGA, MAKA PESANAN PUN AKAN ADMIN PROSES DAN KIRIM RANDOM\n\nKARNA KITA OPEN OFLINE JUGA DIRUMAH\n\nMOHON PENGERTIANNYA YA\n\nDAN MOHON KERJA SAMANYA,UNTUK BARANG YANG SUDAH DI TERIMA,BISA LANGSUNG KLIK KONFIRMASI PENERIMAAN\n\nTERIMA KASIH', 400, 'MERAH,HIJAU,BIRU', 'S===75000,M===75000,L===80000,XL===85000', 100, 58, 10, 'flash sale', '2021-06-13 18:33:53', ''),
-(26, 4, '1623602319-1.jpg', 'New [Hem dave silver OT]pakaian pria kemeja slim Terbaik', 87000, 'bahan katun stretch, ukuran all size\nlebar baju 50cm +-2cm (pengukuran dari lebar dari ujung jahitan ketiak ke ketiak)\npanjang 68cm+-1cm (pengukuran dari kerah bawah ke ujung bagian bawah)\n\n\n[Hem dave silver OT]pakaian pria kemeja slim', 210, '', '', 150, 83, 0, '', '2021-06-13 18:38:38', ''),
-(27, 5, '1623602763-1.jpg', 'Joddie Pant Pink Pakaian Wanita Celana Blus Modern Atasan Hijab Kekinian Casual Pakaian Modis Baju Kerja Simple Trendy Baju Model Terbaru', 75000, 'Joddie Pank Pink Baju Wanita Gamis Baju Terusan Panjang Baju Kerja Gaun Pesta Murah Remaja Baju Muslim Terbaru\n\nGamis Wanita , Gamis Casual , Dress Wanita , Gamis Remaja , Gamis Syari , Gamis Murah , Gamis , Gaun Pesta , Daster , Gamis Wanita Terbaru , Baju Terusan , Dress Wanita XL , Baju Kerja , Dress Pesta , Baju Gamis Santai , Baju Hijab Lucu , Gaun Pesta Wanita Muslim , Baju Wanita , Gamis lucu , Baju Panjang , Gamis Trendy , Baju Muslim , Gaun Pesta , Gaun Pesta , Dress Lucu , Baju Muslim Terbaru 2018 ,Gamis Baju Muslim , Dress Murah , Dress SyaI , Dress Pesta , Baju Lengan Panjang.\n\nCode : Joddie Pant Pink\nPrice : 75000\nMaterial : Babyterry\nSize : All Size Fit to L\n\nTerima Kasih Atas Reviewnya, Mohon Beri BINTANG 5 nya Dan Ikuti Toko Kami, Silahkan Berkunjung Kembali Ke Toko Kami Dan Di Cek Terus Yah Toko Kami Pasti Update Produk Terbaru Setiap Harinya', 350, '', '', 50, 42, 10, 'flash sale', '2021-06-13 18:46:03', ''),
-(28, 5, '1623603982-1.jpg', 'BLOUSE MEOZA', 139000, 'BAHAN MOSCREPE LD 100', 210, '', '', 20, 3, 0, '', '2021-06-13 19:06:22', ''),
-(29, 6, '1623604078-1.jpg', 'Sepatu Nike Airmax Air Max 720 Black White Premium Original BNIB', 415000, 'Hot Item Grade Premium Original (BNIB)\nNike Air Max 720 Black White\n\nGrade / Kualitas: Premium Original (BNIB)\nSize: 39, 40, 41, 42, 43, 44, 45\nSudah Termasuk Box. Brand New In Box (BNIB)\n\nSebelum order sebaiknya tanyakan stock terlebih dahulu kepada seller untuk menghindari batal order karena stock bisa berubah sewaktu waktu.\nSaat order cantumkan size untuk menghindari salah kirim.', 400, '', '', 10, 2, 30, 'flash sale', '2021-06-13 19:07:57', ''),
-(30, 6, '1623604175-1.jpg', 'Sepatu Pria - Sepatu Sneakers - Sepatu Adidas - Sepatu Casual - Sepatu Wanita - Sepatu Sekolah - RUNNING Trendy Adidas ORIGINAL', 450000, '*ADIDAS EQT BAIT EQT EQUIPMENT EQT RUNNING SEPATU PRIA WANITA SNEAKERS RUNNING JOGGING SPORT TRENDY*\n\n\"REAL PICTURE\" ya sista ^_^\n\nBahan Upper Serat Sintetis Pabrikan,\nBahan Sol Polyvinyl chloride.\n\nHitam Garis Hitam SIZE 39 hanya sampai 44\nHitam Garis Putih SIZE 39 hanya sampai 44\nAbuGARIS SIZE Toska/37 hanya sampai 40\nAbuLst SIZE Orange/39 hanya sampai 44\nAbuGARISHitam SIZE 39 hanya sampai 44\nPinkGARISPink SIZE 37 hanya sampai 40\nHitamGARISPink SIZE 37 hanya sampai 40\nMaron SIZE 39 hanya sampai 44\n---------------------------------------\nSIZE CHART\n36 : 23cm\n37 : 23.5cm\n38 : 24cm\n39 : 24.5cm\n40 : 25cm\n41 : 25.5cm\n42 : 26cm\n43 : 26.5cm\n44 : 27cm\n\nSepatu Adidas ini tidak hanya untuk pria saja , tetapi kaum hawa banyak yang menggunakannya karena bahannya bagus dan awet, selain itu nyaman ketika dipakai kemana saja, Sepatu ini diprediksi bakal menjadi tren di Masa akan Datang loh sistaaa.\nHal ini karena Sepatu ini nyaman dipakai ke berbagai acara.\nAyoo.. Jangan sampai kehabisan sisata.^_^\n\nKuat namun tetap Ringan dan Nyaman\nMembuat penampilan anda yg Sporty dan elegan menjadi makin Stylish, fashionable dan dinamis. Sangat cocok untuk dipakai Olahraga Indoor dan Outdoor.\n\nDengan pilihan warna unggulan dan menjadi pilihan utama pengguna ADIDAS.\n\n*Order cantumkan warna dan ukuran di kolom keterangan yaa....\nJika tidak ada kami kirim random, No. complain !!!\n\nBarang Baru + Dus Box\n\nMohon tanyakan stok terlebih dahulu.\n\nKepuasan Pelanggan Adalah Yang Utama Bagi kami....\nHappy Shoping...^_^', 405, '', '', 50, 11, 0, '', '2021-06-13 19:09:35', ''),
-(31, 7, '1623604397-1.jpg', 'Vj bags-new tas ransel futura TAS RANSEL SEKOLAH SMP,SMU/TAS RANSEL REMAJA/TAS RANSEL TERBARU/TAS RANSEL MODEL KOREA/BACKPACK/TAS RANSEL SEKOLAH', 35000, 'Matt Kanvas d300\nModel ransel & backpack\nSize 38cm x 33cm x 14cm\nKondisi 100% Baru\nBerat 460 Gram (1 Kg Masuk 2 Pcs Tas)\nProduk Dapat Dibayar Ditempat (COD)\nProduk Lokal / Handmade\n\nPembayaran Hanya Melalui Transfer Ke Rek Lazada (Bisa Juga Bayar Di Indomaret, Alfamart Atau Outlet Terdekat)\nBiasany Ada Perubahan 1% Warna Disebabkan Faktor Pencahayaan Saat Pengambilan Gambar & Pada Resleting\nJika Anda Mengalami Masalah Silakan Chat Kami Melalui Fitur Chat', 600, '', '', 100, 38, 0, '', '2021-06-13 19:13:16', ''),
-(32, 8, '1623683209-1.jpg', 'HELM BOGO JPN RETRO JPN (ARC) KACA DATAR HITAM DOFF JPN ARC', 250000, 'Helm Retro Tersedia ukuran M , L dan XL \n-- M (56)\n-- L (57-58) \n-- XL (59-60)\n\nSaran Pengambilan Ukuran\n-- M ( Untuk Remaja SMP/ Tidak Ber Hijab )\n-- L ( untuk cewek dan cowok Dewasa) \n-- XL ( untuk cewek berhijab dan cowok gemuk )\n\n- Helm Retro Bogo merk JPN Original\n- Kaca Cembung Bogo Original ( Hitam dan Bening ) \n- kaca Flat injak Original ( Hitam, Bening, Silver dan Pelangi ) \n- Ukuran M , L dan XL\n- Busa Tebal empuk nyaman di kepala\n- Busa bisa di Lepas\n- Standard SNI\n\n--- Packing Menggunakan Bubble Wrap Rangkap\n--- Packing di kenakan berat Hanya 1kg', 1000, 'MERAH,KUNING', 'M===250000,L===280000', 11, 5, 0, '', '2021-06-13 19:14:42', ''),
-(42, 5, '1626966263-1.jpeg', 'TEST', 123, 'TEST', 1000, 'HIJAU,MERAH', 'L===2000,XL===1500', 12, 0, 0, '', '2021-07-22 22:04:22', 'delete');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invoice`
+-- Struktur dari tabel `invoice`
 --
 
 CREATE TABLE `invoice` (
@@ -171,7 +150,7 @@ CREATE TABLE `invoice` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `invoice`
+-- Dumping data untuk tabel `invoice`
 --
 
 INSERT INTO `invoice` (`idinvoice`, `id_iklan`, `id_user`, `jumlah`, `warna_i`, `ukuran_i`, `harga_i`, `diskon_i`, `kurir`, `id_kurir`, `layanan_kurir`, `etd`, `harga_ongkir`, `resi`, `provinsi`, `kota`, `alamat_lengkap`, `waktu`, `tipe_progress`, `transaction`, `type`, `order_id`, `fraud`, `bank_manual`, `bukti_transfer`, `waktu_transaksi`, `waktu_dikirim`, `waktu_selesai`, `waktu_dibatalkan`) VALUES
@@ -185,7 +164,7 @@ INSERT INTO `invoice` (`idinvoice`, `id_iklan`, `id_user`, `jumlah`, `warna_i`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -195,23 +174,20 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id`, `nama`, `icon`) VALUES
-(1, 'Elektronik', 'elektronik.svg'),
-(2, 'Komputer', 'komputer.svg'),
-(3, 'Handphone', 'handphone.svg'),
-(4, 'Pakaian Pria', 'pakaian-pria.svg'),
-(5, 'Pakaian Wanita', 'pakaian-wanita.svg'),
-(6, 'Sepatu', 'sepatu.svg'),
-(7, 'Tas', 'tas.svg'),
-(8, 'Otomotif', 'otomotif.svg');
+(1, 'Kopi Bubuk', 'a47c2b01d7ad4191198a3de4768cde9c.png'),
+(2, 'Kopi Luwak', '2b0ab37e45307dc96785c3f67bd26661.png'),
+(3, 'Kopi Sangrai PREMIUM', '26742494755e9553b2b493198073d596.png'),
+(6, 'Kopi Sangrai Pasaran Umum', '3f82df789054b274afbab2e029084aca.png'),
+(12, 'Kopi Lokal Nusantara', 'dd7b409fc27effa5395fb658fcba81bc.svg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `keranjang`
+-- Struktur dari tabel `keranjang`
 --
 
 CREATE TABLE `keranjang` (
@@ -229,7 +205,7 @@ CREATE TABLE `keranjang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lokasi_user`
+-- Struktur dari tabel `lokasi_user`
 --
 
 CREATE TABLE `lokasi_user` (
@@ -245,7 +221,7 @@ CREATE TABLE `lokasi_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `lokasi_user`
+-- Dumping data untuk tabel `lokasi_user`
 --
 
 INSERT INTO `lokasi_user` (`idlokasi`, `id_user`, `provinsi`, `id_provinsi`, `kota`, `id_kota`, `kecamatan`, `kelurahan`, `alamat_lengkap`) VALUES
@@ -254,7 +230,7 @@ INSERT INTO `lokasi_user` (`idlokasi`, `id_user`, `provinsi`, `id_provinsi`, `ko
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nomor_rekening`
+-- Struktur dari tabel `nomor_rekening`
 --
 
 CREATE TABLE `nomor_rekening` (
@@ -265,17 +241,17 @@ CREATE TABLE `nomor_rekening` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `nomor_rekening`
+-- Dumping data untuk tabel `nomor_rekening`
 --
 
 INSERT INTO `nomor_rekening` (`idnorek`, `nama_bank`, `norek`, `an`) VALUES
-(1, 'BCA', '123456789', 'MC PROJECT'),
+(1, 'BCA', '123456789', 'HALO KOPI'),
 (2, 'BRI', '1876889286539', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `notification`
+-- Struktur dari tabel `notification`
 --
 
 CREATE TABLE `notification` (
@@ -289,7 +265,7 @@ CREATE TABLE `notification` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `notification`
+-- Dumping data untuk tabel `notification`
 --
 
 INSERT INTO `notification` (`id_notif`, `id_user`, `id_invoice`, `nama_notif`, `deskripsi_notif`, `waktu_notif`, `status_notif`) VALUES
@@ -385,7 +361,7 @@ INSERT INTO `notification` (`id_notif`, `id_user`, `id_invoice`, `nama_notif`, `
 (90, 14, 102, 'Pembayaran Berhasil', 'Pembayaran pesanan sudah berhasil terverifikasi', '2021-09-09 12:25:46', 'Read'),
 (91, 14, 102, 'Pesanan Dikemas', 'Pesanan sedang dalam proses pengemasan oleh penjual', '2021-09-09 12:25:46', 'Read'),
 (92, 14, 103, 'Pesanan Dikirim', 'Pesanan sudah dikirim oleh penjual dan sedang dalam perjalanan', '2021-09-09 12:26:21', 'Read'),
-(93, 0, 0, 'Pesanan Dikirim', 'Pesanan sudah dikirim oleh penjual dan sedang dalam perjalanan', '2021-09-09 12:26:30', ''),
+(93, 0, 0, 'Pesanan Dikirim', 'Pesanan sudah dikirim oleh penjual dan sedang dalam perjalanan', '2021-09-09 12:26:30', 'Read'),
 (94, 14, 102, 'Pesanan Dikirim', 'Pesanan sudah dikirim oleh penjual dan sedang dalam perjalanan', '2021-09-09 12:26:33', 'Read'),
 (95, 14, 103, 'Pesanan Telah Sampai', 'Pesanan sudah sampai ke tempat tujuan', '2021-09-09 12:26:44', 'Read'),
 (96, 14, 102, 'Pesanan Telah Sampai', 'Pesanan sudah sampai ke tempat tujuan', '2021-09-09 12:26:48', 'Read');
@@ -393,7 +369,7 @@ INSERT INTO `notification` (`id_notif`, `id_user`, `id_invoice`, `nama_notif`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rating`
+-- Struktur dari tabel `rating`
 --
 
 CREATE TABLE `rating` (
@@ -405,7 +381,7 @@ CREATE TABLE `rating` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `rating`
+-- Dumping data untuk tabel `rating`
 --
 
 INSERT INTO `rating` (`idrating`, `id_invoice_rat`, `star_rat`, `deskripsi_rat`, `waktu_rat`) VALUES
@@ -422,7 +398,7 @@ INSERT INTO `rating` (`idrating`, `id_invoice_rat`, `star_rat`, `deskripsi_rat`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting_apikey`
+-- Struktur dari tabel `setting_apikey`
 --
 
 CREATE TABLE `setting_apikey` (
@@ -435,7 +411,7 @@ CREATE TABLE `setting_apikey` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `setting_apikey`
+-- Dumping data untuk tabel `setting_apikey`
 --
 
 INSERT INTO `setting_apikey` (`id_apikey`, `google_client_id`, `google_client_secret`, `midtrans_client_key`, `midtrans_server_key`, `rajaongkir_key`) VALUES
@@ -444,7 +420,7 @@ INSERT INTO `setting_apikey` (`id_apikey`, `google_client_id`, `google_client_se
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting_email`
+-- Struktur dari tabel `setting_email`
 --
 
 CREATE TABLE `setting_email` (
@@ -458,16 +434,16 @@ CREATE TABLE `setting_email` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `setting_email`
+-- Dumping data untuk tabel `setting_email`
 --
 
 INSERT INTO `setting_email` (`id`, `email_notif`, `host_smtp`, `port_smtp`, `username_smtp`, `password_smtp`, `setfrom_smtp`) VALUES
-(1, 'support@401xd.com', 'mail.401xd.com', 465, 'support@401xd.com', 'PASSWORD EMAIL ANDA', 'SENJA STORE');
+(1, 'support@halokopi.com', 'mail.halokopi.com', 465, 'support@halokopi.com', 'PASSWORD EMAIL ANDA', 'Halo Kopi STORE');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting_footer`
+-- Struktur dari tabel `setting_footer`
 --
 
 CREATE TABLE `setting_footer` (
@@ -479,21 +455,21 @@ CREATE TABLE `setting_footer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `setting_footer`
+-- Dumping data untuk tabel `setting_footer`
 --
 
 INSERT INTO `setting_footer` (`id_fo`, `name_social`, `icon_social`, `link_social`, `status_social`) VALUES
-(1, 'Facebook', '<i class=\"ri-facebook-box-fill\"></i>', 'https://facebook.com/mycodingxd', ''),
-(2, 'Instagram', '<i class=\"ri-instagram-fill\"></i>', 'https://instagram.com/mycodingxd', ''),
-(3, 'Whatsapp', '<i class=\"ri-whatsapp-fill\"></i>', 'https://wa.me/6282377823390', ''),
-(4, 'Twitter', '<i class=\"ri-twitter-fill\"></i>', 'https://twitter.com/mycodingxd', ''),
-(5, 'YouTube', '<i class=\"ri-youtube-fill\"></i>', 'https://youtube.com/mycodingxd', ''),
-(6, 'LinkedIn', '<i class=\"ri-linkedin-fill\"></i>', 'https://linkedin.com/', '');
+(1, 'Facebook', '<i class=\"ri-facebook-box-fill\"></i>', 'https://facebook.com/halokopi', ''),
+(2, 'Instagram', '<i class=\"ri-instagram-fill\"></i>', 'https://instagram.com/halokopi', ''),
+(3, 'Whatsapp', '<i class=\"ri-whatsapp-fill\"></i>', 'https://wa.me/628123456', ''),
+(4, 'Twitter', '<i class=\"ri-twitter-fill\"></i>', 'https://twitter.com/halokopi', ''),
+(5, 'YouTube', '<i class=\"ri-youtube-fill\"></i>', 'https://youtube.com/halokopi', ''),
+(6, 'LinkedIn', '<i class=\"ri-linkedin-fill\"></i>', 'https://linkedin.com/halokopi', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting_header`
+-- Struktur dari tabel `setting_header`
 --
 
 CREATE TABLE `setting_header` (
@@ -504,16 +480,16 @@ CREATE TABLE `setting_header` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `setting_header`
+-- Dumping data untuk tabel `setting_header`
 --
 
 INSERT INTO `setting_header` (`id_hs`, `logo`, `title_name`, `placeholder_search`) VALUES
-(1, 'logo.png', 'Senja Teduh Store', 'Pencarian..');
+(1, 'logo1.png', 'Halo Kopi Store', 'Pencarian..');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting_lokasi`
+-- Struktur dari tabel `setting_lokasi`
 --
 
 CREATE TABLE `setting_lokasi` (
@@ -525,7 +501,7 @@ CREATE TABLE `setting_lokasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `setting_lokasi`
+-- Dumping data untuk tabel `setting_lokasi`
 --
 
 INSERT INTO `setting_lokasi` (`id`, `provinsi`, `kota`, `provinsi_id`, `kota_id`) VALUES
@@ -534,7 +510,7 @@ INSERT INTO `setting_lokasi` (`id`, `provinsi`, `kota`, `provinsi_id`, `kota_id`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting_pembayaran`
+-- Struktur dari tabel `setting_pembayaran`
 --
 
 CREATE TABLE `setting_pembayaran` (
@@ -544,7 +520,7 @@ CREATE TABLE `setting_pembayaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `setting_pembayaran`
+-- Dumping data untuk tabel `setting_pembayaran`
 --
 
 INSERT INTO `setting_pembayaran` (`id`, `tipe`, `status`) VALUES
@@ -556,209 +532,209 @@ INSERT INTO `setting_pembayaran` (`id`, `tipe`, `status`) VALUES
 --
 
 --
--- Indexes for table `akun`
+-- Indeks untuk tabel `akun`
 --
 ALTER TABLE `akun`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `banner_promo`
+-- Indeks untuk tabel `banner_promo`
 --
 ALTER TABLE `banner_promo`
   ADD PRIMARY KEY (`idbanner`);
 
 --
--- Indexes for table `flashsale`
+-- Indeks untuk tabel `flashsale`
 --
 ALTER TABLE `flashsale`
   ADD PRIMARY KEY (`id_fs`);
 
 --
--- Indexes for table `iklan`
+-- Indeks untuk tabel `iklan`
 --
 ALTER TABLE `iklan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `invoice`
+-- Indeks untuk tabel `invoice`
 --
 ALTER TABLE `invoice`
   ADD PRIMARY KEY (`idinvoice`);
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `keranjang`
+-- Indeks untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `lokasi_user`
+-- Indeks untuk tabel `lokasi_user`
 --
 ALTER TABLE `lokasi_user`
   ADD PRIMARY KEY (`idlokasi`);
 
 --
--- Indexes for table `nomor_rekening`
+-- Indeks untuk tabel `nomor_rekening`
 --
 ALTER TABLE `nomor_rekening`
   ADD PRIMARY KEY (`idnorek`);
 
 --
--- Indexes for table `notification`
+-- Indeks untuk tabel `notification`
 --
 ALTER TABLE `notification`
   ADD PRIMARY KEY (`id_notif`);
 
 --
--- Indexes for table `rating`
+-- Indeks untuk tabel `rating`
 --
 ALTER TABLE `rating`
   ADD PRIMARY KEY (`idrating`);
 
 --
--- Indexes for table `setting_apikey`
+-- Indeks untuk tabel `setting_apikey`
 --
 ALTER TABLE `setting_apikey`
   ADD PRIMARY KEY (`id_apikey`);
 
 --
--- Indexes for table `setting_email`
+-- Indeks untuk tabel `setting_email`
 --
 ALTER TABLE `setting_email`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `setting_footer`
+-- Indeks untuk tabel `setting_footer`
 --
 ALTER TABLE `setting_footer`
   ADD PRIMARY KEY (`id_fo`);
 
 --
--- Indexes for table `setting_header`
+-- Indeks untuk tabel `setting_header`
 --
 ALTER TABLE `setting_header`
   ADD PRIMARY KEY (`id_hs`);
 
 --
--- Indexes for table `setting_lokasi`
+-- Indeks untuk tabel `setting_lokasi`
 --
 ALTER TABLE `setting_lokasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `setting_pembayaran`
+-- Indeks untuk tabel `setting_pembayaran`
 --
 ALTER TABLE `setting_pembayaran`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `akun`
+-- AUTO_INCREMENT untuk tabel `akun`
 --
 ALTER TABLE `akun`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `banner_promo`
+-- AUTO_INCREMENT untuk tabel `banner_promo`
 --
 ALTER TABLE `banner_promo`
-  MODIFY `idbanner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `idbanner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
--- AUTO_INCREMENT for table `flashsale`
+-- AUTO_INCREMENT untuk tabel `flashsale`
 --
 ALTER TABLE `flashsale`
   MODIFY `id_fs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `iklan`
+-- AUTO_INCREMENT untuk tabel `iklan`
 --
 ALTER TABLE `iklan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT for table `invoice`
+-- AUTO_INCREMENT untuk tabel `invoice`
 --
 ALTER TABLE `invoice`
   MODIFY `idinvoice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `keranjang`
+-- AUTO_INCREMENT untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
 
 --
--- AUTO_INCREMENT for table `lokasi_user`
+-- AUTO_INCREMENT untuk tabel `lokasi_user`
 --
 ALTER TABLE `lokasi_user`
   MODIFY `idlokasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `nomor_rekening`
+-- AUTO_INCREMENT untuk tabel `nomor_rekening`
 --
 ALTER TABLE `nomor_rekening`
   MODIFY `idnorek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `notification`
+-- AUTO_INCREMENT untuk tabel `notification`
 --
 ALTER TABLE `notification`
   MODIFY `id_notif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
--- AUTO_INCREMENT for table `rating`
+-- AUTO_INCREMENT untuk tabel `rating`
 --
 ALTER TABLE `rating`
   MODIFY `idrating` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `setting_apikey`
+-- AUTO_INCREMENT untuk tabel `setting_apikey`
 --
 ALTER TABLE `setting_apikey`
   MODIFY `id_apikey` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `setting_email`
+-- AUTO_INCREMENT untuk tabel `setting_email`
 --
 ALTER TABLE `setting_email`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `setting_footer`
+-- AUTO_INCREMENT untuk tabel `setting_footer`
 --
 ALTER TABLE `setting_footer`
   MODIFY `id_fo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `setting_header`
+-- AUTO_INCREMENT untuk tabel `setting_header`
 --
 ALTER TABLE `setting_header`
   MODIFY `id_hs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `setting_lokasi`
+-- AUTO_INCREMENT untuk tabel `setting_lokasi`
 --
 ALTER TABLE `setting_lokasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `setting_pembayaran`
+-- AUTO_INCREMENT untuk tabel `setting_pembayaran`
 --
 ALTER TABLE `setting_pembayaran`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

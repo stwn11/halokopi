@@ -58,6 +58,6 @@
                 </div>
             </div>
         </div>
-        <p class="copyright"><a href="<?php echo $url; ?>"><?php echo $title_name; ?></a> - <a href="https://mycoding.id" rel="dofollow" target="_blank">MC Project</a> - <a href="https://401xd.com" rel="dofollow" target="_blank">401XD Group</a></p>
+        <p class="copyright"><a href="<?php echo $url; ?>"><?php echo $title_name; ?></a> - <a href="https://halokopi.com" rel="dofollow" target="_blank">Halo Kopi</a> - <a href="https://halokopi.com" rel="dofollow" target="_blank">Halo Kopi Project</a></p>
     </div>
 </footer>

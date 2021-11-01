@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
 :root {
     /* ganti kode warna dibawah ini sesuai keinginan */
     --black: #111111;
     --semi-black: #505050;
     --bg-transparent-black: rgba(0, 0, 0, 0.5);
+    /* --background: Linear-gradient(to right, #E0FFFF, #DCDCDC, #E0FFFF); */
     --white: #ffffff;
-    --orange: #483434; /* MERAH */
-    --deep-orange: #6B4F4F; /* DEEP MERAH */
-    --semi-orange: #FFF3E4; /* DEMI MERAH */
+    --orange: #6B4F4F; /* MERAH */
+    --deep-orange: #483434; /* DEEP MERAH */
+    --semi-orange: #F05C79; /* DEMI MERAH */
     --grey: #959595;
     --border-grey: #e2e2e2;
     --semi-grey: #f5f5f5;
-    --red: #EED6C4; /* MERAH DUA */
+    --red: #CC3333; /* MERAH DUA */
 }
 
 * {

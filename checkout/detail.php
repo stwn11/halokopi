@@ -73,7 +73,7 @@ $data_norek = mysqli_fetch_assoc($select_norek);
     <title>Checkout</title>
     <link rel="icon" href="../../assets/icons/<?php echo $logo; ?>" type="image/svg">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-rwRR5kz4E-kNnJs2"></script>
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-2Um3YUABSlMSWTjS"></script>
     <link rel="stylesheet" href="../../assets/css/checkout/detail.css">
 </head>
 

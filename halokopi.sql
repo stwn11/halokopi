@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Okt 2021 pada 12.30
+-- Waktu pembuatan: 01 Nov 2021 pada 12.43
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.10
 
@@ -45,7 +45,8 @@ CREATE TABLE `akun` (
 
 INSERT INTO `akun` (`id`, `foto`, `nama_lengkap`, `email`, `no_whatsapp`, `password`, `waktu`, `tipe_daftar`, `tipe_akun`) VALUES
 (14, '1635395222.png', 'User', 'user@gmail.com', '0123456789', '$2y$10$uDy0.tHRpB0alUAAwL.1XOT/f3Y6O4SfIZ28rnhyyRlkEgacqimPu', '2021-06-18 16:20:48', '', ''),
-(15, '1635395184.png', 'Administrator', 'admin@gmail.com', '0812345678910', '$2y$10$ivlVrsDRBVq7ZDlsBcLj7eJ2B8RlEY9cVNnNk.H0kkoQxP6b6PSBu', '2021-07-11 01:18:30', '', 'Admin');
+(15, '1635395184.png', 'Administrator', 'admin@gmail.com', '0812345678910', '$2y$10$ivlVrsDRBVq7ZDlsBcLj7eJ2B8RlEY9cVNnNk.H0kkoQxP6b6PSBu', '2021-07-11 01:18:30', '', 'Admin'),
+(20, 'user.png', 'Angga Setiyawan', 'anggasetiyawan11@gmail.com', '', '', '2021-11-01 09:36:48', 'Google', '');
 
 -- --------------------------------------------------------
 
@@ -111,6 +112,37 @@ CREATE TABLE `iklan` (
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `iklan`
+--
+
+INSERT INTO `iklan` (`id`, `id_kategori`, `gambar`, `judul`, `harga`, `deskripsi`, `berat`, `warna`, `ukuran`, `stok`, `terjual`, `diskon`, `tipe_iklan`, `waktu`, `status`) VALUES
+(43, 1, '1635733911-1.jpg', 'Aceh Gayo Anaerob Natural 200g Kopi Arabica', 85000, 'Aceh Gayo Anaerob Natural 200g Kopi Arabica\n\nUntuk setiap bubuk kopi single origin yang dijual di Halo Kopi, semuanya digiling dengan memakai mesin penggiling Mahlkonig VTA 6S. Mesin ini memiliki conical burr yang terkenal dengan hasil gilingan yang presisi di setiap partikel gilingannya. Karenanya, kini para pelanggan setia Halo Kopi bisa memilih berbagai rentang pilihan level gilingan sesuai dengan kebutuhan masing-masing, mulai dari super fine hingga coarse.\n\nUntuk bahan rekomendasi:\nSuper fine: Turkish coffee\nFine: Espresso\nMedium fine: Mokapot\nMedium: Pour over (V60, Chemex, Kalita) syphon, Aeropress, Vietnam Drip\nMedium coarse: French press\nCoarse: Cold drip, cold brew', 200, '', '', 20, 0, 0, '', '2021-11-01 03:31:51', ''),
+(44, 1, '1635734452-1.jpg', 'Bali Honey Process 200g Kopi Arabica', 95000, 'Bali Honey Process 200g Kopi Arabica\n\nUntuk setiap bubuk kopi single origin yang dijual di Halo Kopi semuanya digiling dengan memakai mesin penggiling Mahlkonig VTA 6S. Mesin ini memiliki conical burr yang terkenal dengan hasil gilingan yang presisi di setiap partikel gilingannya. Karenanya, kini para pelanggan setia Halo Kopi bisa memilih berbagai rentang pilihan level gilingan sesuai dengan kebutuhan masing-masing, mulai dari super fine hingga coarse.\n\nUntuk bahan rekomendasi:\nSuper fine: Turkish coffee\nFine: Espresso\nMedium fine: Mokapot\nMedium: Pour over (V60, Chemex, Kalita) syphon, Aeropress, Vietnam Drip\nMedium coarse: French press\nCoarse: Cold drip, cold brew', 200, '', '', 20, 0, 0, '', '2021-11-01 03:40:52', ''),
+(45, 2, '1635744112-1.jpg,1635744112-2.jpg', 'A-IDIO - Drip Coffee Kettle 240ml', 585000, 'A-IDIO - Drip Coffee Kettle 240ml\n\nKETEL leher angsa produksi A-IDIO dari Taiwan ini melengkapi satu lagi daftar ketel-ketel pilihan Anda untuk menyeduh dan membuat kopi. Ketel dengan desain stylish yang kini sudah bisa Anda pesan di Halo Kopi ini memiliki tampilan elegan dan sekaligus fungsional. Bentuk corongnya yang panjang dan corong yang kecil membuat jatuh tetesan air lebih lambat, kecil dan sangat terkontrol. Menuangkan air pun menjadi jauh lebih mudah dan praktis.\n\nSet ketel A-IDIO ini termasuk bagian tutup (lid) dari kayu yang stylish. Bagian handle-nya juga sangat nyaman digenggam dan disangga, sehingga semakin memudahkan Anda menentukan kendali tuangan aliran air yang Anda butuhkan, apakah dengan laju deras atau bahkan sekecil mungkin.\n\nKetel A-IDIO yang didesain oleh Vcomplus TECH. INC. dari Taiwan ini pun merupakan finalis Golden Pin Design Award 2018 untuk kategori desain produk. Ketel leher angsa A-IDIO ini cocok digunakan di kedai-kedai kopi, kafe, maupun di rumah untuk penggunaan sehari-hari. Segera pesan di Halo Kopi sebelum kehabisan.', 500, 'Rose Gold,Blue', '', 10, 0, 0, '', '2021-11-01 06:21:51', ''),
+(46, 2, '1635744386-1.jpg,1635744386-2.jpg', 'A-IDIO - Stylish Temperature Kettle 350ml', 740000, 'A-IDIO - Stylish Temperature Kettle 350ml \n\nSALAH satu rangkaian alat-alat untuk membuat kopi terbaru dari A-IDIO, perusahaan asal Taiwan, ini adalah ketel mini yang telah dilengkapi dengan thermometer. Ketel stylish ini bisa Anda pesan di Halo Kopi dan memiliki desain minimalis yang elegan sehingga akan menarik perhatian siapa saja yang melihatnya – termasuk pelanggan di kedai kopi atau kafe Anda.\n\nMaterialnya terbuat dari stainless steel grade 304 yang berkualitas dan sekaligus tahan lama. Material ini juga halus, cepat kering dan tahan karat.\nKetel A-IDIO dengan pengukur temperatur telah mendapat penghargaan desain dari Golden Pin Design Award di tahun 2017.\n\nKonsep desain: spout tipis pada corong leher angsa berukuran 5 mm, memungkinkan jatuh tetesan air mengalir dengan laju begitu tipis dan terkendali – sangat baik untuk menuangkan air untuk kebutuhan pour over. \nPegangan nyaman, dengan tutup kayu.\nDilengkapi dengan thermometer pengukur suhu (yang dapat dilepas), sehingga Anda pun bisa mengawasi suhu air setiap saat sembari menuangkan air.\nHandel ergonomis yang telah dipatenkan.\n\nKetel stylish temperature A-IDIO cocok digunakan di kedai kopi, kafe yang mengedepankan presisi dalam laju tetesan air dan sekaligus sisi artistiknya, maupun dipakai di rumah untuk kebutuhan menyeduh kopi sehari-hari. Segera pesan di Halo Kopi sebelum kehabisan.', 800, 'Rose Gold,Mirror Silver', '', 15, 0, 0, '', '2021-11-01 06:26:25', ''),
+(47, 3, '1635744726-1.jpg', 'Apron OTA 2A', 350000, 'Apron OTA 2A\n\nMerupakan celemek khusus yang umum digunakan para barista, karena selain melindungi dari cipratan selama membuat kopi, celemek barista juga menjadikan penampilan menarik ketika melayani pengunjung. Terbuat dari bahan kain denim marsoto premium dan dilengkapi dengan tali yang terbuat dari bahan kulit sintetis. Dijahit penuh ketelitian dengan benang nilon berkualitas untuk mengedepankan kenyamanan ketika menggunakannya selama proses seduh, sebabnya Halo Kopi merekomendasikan apron ini pada Anda.\n\nTersedia dalam 7 desain celemek berbeda, dengan variasi kantung sesuai kebutuhan Anda, lihat koleksi Apron lainnya. Jangan khawatir pakaian Anda menjadi kotor, karena celemek barista ini akan selalu melindungi selama bekerja di bar. Gantungkan tali apron di leher, dan rasakan kenyamanan menggunakannya, maka tunggu apa lagi, pesan segera di Halo Kopi', 700, 'Navy', '', 5, 0, 0, '', '2021-11-01 06:32:06', ''),
+(48, 3, '1635745129-1.jpg', 'Apron OTA 3A', 350000, 'Apron OTA 3A﻿\n\nMerupakan celemek khusus yang umum digunakan para barista, karena selain melindungi dari cipratan selama membuat kopi, celemek barista juga menjadikan penampilan menarik ketika melayani pengunjung. Terbuat dari bahan kain denim marsoto premium dan dilengkapi dengan tali yang terbuat dari bahan kulit sintetis. Dijahit penuh ketelitian dengan benang nilon berkualitas untuk mengedepankan kenyamanan ketika menggunakannya selama proses seduh, sebabnya Halo Kopi merekomendasikan apron ini pada Anda.\n\nTersedia dalam 7 desain celemek berbeda, dengan variasi kantung sesuai kebutuhan Anda, lihat koleksi Apron lainnya. Jangan khawatir pakaian Anda menjadi kotor, karena celemek barista ini akan selalu melindungi selama bekerja di bar. Gantungkan tali apron di leher, dan rasakan kenyamanan menggunakannya, maka tunggu apa lagi, pesan segera di Halo Kopi', 700, 'Hitam', '', 5, 0, 0, '', '2021-11-01 06:38:48', ''),
+(49, 6, '1635748347-1.jpg,1635748347-2.jpg', 'BUNN - AXIOM3 Automatic Coffee Brewer (2 Upper / 1 Lower Warmers)', 18000000, 'BUNN - AXIOM3 Automatic Coffee Brewer (2 Upper / 1 Lower Warmers)\n\nSpesifikasi :\nBrand : BUNN\nModel : AXIOM3\nVoltase : 230 V / 50-60 Hz\nUkuran : 54,4 x 21,6 x 48 cm\nBerat : 14,36 kg\nFinish : Stainless steel\nWarmers : 2 Upper / 1 Lower\nWater Access : Plumbed\nIncluded : 3 Decanter\nGaransi 1 Tahun\n\nFeatures :\nAdjusts automatically to varying water pressure\nFor high lime areas, BrewLOGIC® technology calculates flow rate and adjusts brew time to maintain consistent pot levels \nCold brew lock-out and automatic warmer time-out ensure high quality, fresh tasting coffee\nFront of machine programming simplifies installation\nFor high lime areas, BrewLOGIC® technology calculates flow rate and adjusts brew time to maintain consistent pot levels\nLarge 200oz. (5.9L) tank provides back-to-back brewing capacity\nCoffee extraction controlled with pre-infusion and pulse brew, digital temperature control, and large sprayhead; coffee strength controlled with variable by-pass.\nEnergy-saver mode reduces tank temperature during idle periods \nEnsures coffee brew quality with cold brew lock out capability\nHot water faucet\nSplashGard® funnel deflects hot liquids away from the hand\n\nNote : Pengiriman akan dilakukan maksimal 1 Minggu setelah orderan masuk', 14360, '', '', 2, 0, 3, 'flash sale', '2021-11-01 07:32:26', ''),
+(50, 6, '1635748722-1.jpg,1635748722-2.jpg', 'Barisieur - Pour Over Filter Coffee Maker', 9650000, 'Barisieur - Pour Over Filter Coffee Maker\n\nBARISIEUR merupakan alat membuat kopi otomatis yang sekaligus berfungsi sebagai “alarm” yang membantu Anda bangun tepat waktu saat pagi. Produk jebolan Kickstarter ini dibuat oleh Joshua Renouf, desainer asal Inggris, sejak 2016 yang tampilannya terinspirasi akan konsep desain yang elegan, mampu memberikan pengalaman personal bagi penggunanya, dan sekaligus terbuat dari material yang berkualitas. Setelah mendapat cukup banyak perhatian dari para penggemar kopi Internasional, kini Barisieur telah hadir di Halo Kopi dan bisa Anda pesan untuk mengalami juga sensasinya.\n\nSpesifikasi :\nBrand : Barisieur\nMaterial : Black Corian, Stainless Steel Ball-Bearings, Sustainable Stainless Steel Coffee Filter, Bespoke Hand-Blown Glass, and American Walnut Tray\nUkuran : 25 x 16,5 x 26 cm\nBoiling Vessel : 200ml max\nGlass Funnel : 90ml\nDrawer : 180g\nMilk Vessel : 25ml\nSpoon : 15g\nCup : 160ml\nColor : White & Black\nDesign by Joshua Renouf, London\nMade by Joshua Shires, Shenzhen', 5000, 'White,Black', '', 5, 0, 5, 'flash sale', '2021-11-01 07:38:41', ''),
+(51, 6, '1635748978-1.jpg', 'DeLonghi - ECP 33 / ECP 35 Replacement - Portafilter', 550000, 'DeLonghi - ECP 33 / ECP 35 Replacement - Portafilter\nSpesifikasi :\nBrand : DeLonghi\nMaterial : Plastik & Stainless Steel\nCocok untuk DeLonghi - Espresso Machine ECP 33 / ECP 35\nMade in China\n\nNote : Belum termasuk filter basket', 1000, '', '', 3, 0, 0, '', '2021-11-01 07:42:57', ''),
+(52, 6, '1635749117-1.jpg', 'DeLonghi - Espresso Machine ECP 33.21.BK', 2650000, 'DeLonghi - Espresso Machine ECP 33.21.BK\n\nTidak ada yang tidak mungkin, dengan cara mudah Anda bisa menikmati sajian espresso setiap harinya. Maka dengan ini seharusnya Anda akan terkesima dengan kehebatan Mesin Espresso ECP 33.21. Daya tarik desain minimalis dengan kemampuan hasilkan sajian kopi berkualitas tentu menjadi incaran banyak pecinta espresso. Mudah digunakan, merawatnya pun gampang, sebabnya Halo Kopi merekomendasikan mesin espresso ini hanya pada Anda yang membutuhkan kesederhanaan dengan kualitas sajian luar biasa. Kapasitas air bisa menampung hingga 1.1liter, proses mengukus susu untuk persiapan cappuccino dapat disesuaikan.\n\nSpesifikasi :\nBrand : DeLonghi\nKode : ECP33.21.BK\nDaya : 1.100 W\nVoltase : 220-240 Volt ~ 50/60Hz\nBody material : Plastic\nHeating system : Stainless steal boiler\nDimensi (PxLxT) cm : 18,5 x 24 x 30,5 cm\nBerat : 4,1 kg\nWater Tank Capacity : 1,1 L\nMaximum cup height : 13\nPump pressure : 15 bar\nKompatibel dengan ESE pods\nWarna : Black\nGaransi : 2 Tahun\nMade in China', 4100, '', '', 3, 0, 2, 'flash sale', '2021-11-01 07:45:16', ''),
+(53, 12, '1635749471-1.jpg,1635749471-2.jpg', 'Baratza - Coffee Grinder Encore Black', 2950000, 'Baratza Encore\n\nBaratza adalah sebuah perusahaan yang menciptakan alat penggiling kopi dengan berkomitmen menciptakan alat terbaik untuk para penikmat kopi. Sejak 1999 hingga sekarang Kyle Anderson dan Kyra Kennedy dua orang yang berada di balik kesuksesan Baratza terus melakukan inovasi dari tahun ke tahun untuk mendukung kepuasan para kostumernya. Baratza berkomitmen menciptakan alat penggiling kopi yang hasilnya konsisten, presisi dan menjaga cita rasa biji kopi, mengubahnya menjadi bubuk tanpa mengubah rasa dan kesegarannya. Baratza diperuntukkan untuk mini café dan para peminat kopi yang menginginkan kenikmatan secangkir kopi di tiap harinya. \n\nSpesifikasi :\nBrand : Baratza\nPower : 110 W\nVoltase : 230 V AC ~50/60Hz\nBerat : 3.1 kg\nKapasitas : 227gr biji kopi, 142gr bubuk\nUkuran (PxLxT) : 16 x 12 x 35 cm\nMaterial : Plastic\nBurr Type : Conical, Steel\nBurr Size : 71mm\nSpeed to Grind: 0.8 - 1.1 gr / sec\nBurr Speed : 550 rpm\nWarna : Hitam\nGaransi 1 Tahun\nMade in Taiwan', 3100, '', '', 4, 0, 0, '', '2021-11-01 07:51:11', ''),
+(54, 12, '1635749602-1.jpg', 'Baratza - Coffee Grinder Sette 30-S02', 4450000, 'Baratza - Coffee Grinder Sette 30S02\n\nMerupakan mesin penggiling kopi elektrik, secara otomatis menggiling biji kopi sesuai yang diinginkan. Sangat tepat mendukung rutinitas minum kopi harian untuk penggunaan kedai kopi atau penggunaan rumahan. Baratza sendiri adalah merek ternama di kalangan pecinta kopi, bahkan penghargaan pun diterbitkan oleh Specialty Coffee Association pada produsen mesin grinder elektrik ini. Oleh karenanya, Halo Kopi merekomendasikan penggunaan Baratza untuk kebutuhan menggiling biji kopi Anda.\n\nSpesifikasi :\nBrand : Baratza\nModel : Sette 30S02\nPower : 280 W\nVoltase : 230 V AC ~50/60Hz\nDimensi (PxLxT) : 24 x 13 x 38 cm\nBerat : 3.2 kg\nKapasitas hopper : 300-400g\nBurr : 40mm steel burrs by Etzinger\nSpeed to Grind : fine (3.5g/sec), coarse (5.5g/sec)\nGaransi 1 Tahun\nMade in Taiwan', 3200, '', '', 3, 0, 0, '', '2021-11-01 07:53:22', ''),
+(55, 13, '1635749942-1.jpg,1635749942-2.jpg', 'ACME - Demitasse Cup 70ml ', 70000, 'ACME DEMITASSE CUP 70ML\n\nACME cups adalah produk-produk cangkir khusus untuk berbagai variasi minuman kopi produksi New Zealand. Cangkir-cangkir ACME didesain langsung oleh Jeff Kennedy, yang merupakan seorang ahli kopi senior dan disebut-sebut sebagai “Godfather” dari New Zealand espresso. Ia juga penerima penghargaan Lifetime Achievement Award dari Specialty Coffee Association New Zealand dimana cangkir-cangkir kopi produksinya telah banyak dipakai di negara itu selama bertahun-tahun.\n\nSpesifikasi:\nMerek : ACME\nTipe : Demitasse Cups\nBahan : Ceramic\nDiameter  Luar : 6.5 cm, Tinggi : 5.5 cm\nKapasitas : 70ml\nWarna : Cokelat \nCocok untuk ACME - Saucer 11cm Brown\nMade in China', 200, 'Brown (Weka),Grey (Dolphin)', '', 10, 0, 0, '', '2021-11-01 07:59:01', ''),
+(56, 13, '1635750156-1.jpg,1635750156-2.jpg', 'ACME - Latte Cup 280ml with Saucer', 220000, 'ACME LATTE CUP 280ML\n\nACME cups adalah produk-produk cangkir khusus untuk berbagai variasi minuman kopi produksi New Zealand. Cangkir-cangkir ACME didesain langsung oleh Jeff Kennedy, yang merupakan seorang ahli kopi senior dan disebut-sebut sebagai “Godfather” dari New Zealand espresso. Ia juga penerima penghargaan Lifetime Achievement Award dari Specialty Coffee Association New Zealand dimana cangkir-cangkir kopi produksinya telah banyak dipakai di negara itu selama bertahun-tahun.', 300, 'Blue (Kokako),Red (Rata)', '', 10, 0, 0, '', '2021-11-01 08:02:36', ''),
+(57, 13, '1635750321-1.jpg', 'Artworks - Coffee is Brewed for Friend', 375000, 'Artworks\n\nMerupakan pajangan artworks dekorasi penuh estetis terbuat dari bahan kayu pilihan, guna menambah nuansa ramah dan nyaman sebagai penyejuk mata bagi pengunjung kedai kopi. Nikmatnya sajian kopi dengan interior menarik tentu kombinasi tepat dari sebuah kedai kopi nyaman. Bahkan sekarang ini, konsep interior secara tidak langsung menampilkan identitas dari sebuah kedai kopi, dan juga sebagai alternatif pemasaran ketika pengunjung mengabadikan momen di kedai kopi. Oleh karenanya, Halo Kopi merekomendasikan Artworks ini untuk menambah nuansa kedai kopi Anda menjadi lebih menarik.\n\nSpesifikasi:\nArtworks - Coffee is Brewed for Friend\nMaterial : Kayu\nUkuran (PxL) : 60 x 60 cm', 1000, '', '', 5, 0, 0, '', '2021-11-01 08:05:21', ''),
+(58, 15, '1635750470-1.jpg', 'Braun - MultiQuick 3 Hand Blender (MQ 3035)', 1450000, 'Braun - MultiQuick 3 Hand Blender (MQ 3035)\nSpesifikasi :\nBrand : Braun\nKode : MQ 3035\nWattage : 700W\nBPA free food contact parts: Yes\nColour: White / blue\nBlending shaft material: Stainless steel\nPower cord length: 1.2 m\nKnife material: Stainless steel\nInclude : MQ 30 Chopper, Braun MQ 10 Whisk & Beaker\nDishwasher safe parts (refer to instructions): Yes\nGaransi : 1 Tahun', 1000, '', '', 5, 0, 4, 'flash sale', '2021-11-01 08:07:50', ''),
+(59, 15, '1635750627-1.jpg,1635750627-2.jpg', 'Kenwood - Electric Oven (MO280)', 975000, 'Kenwood - Electric Oven (MO280)\n\nTidak ada yang secantik ini, memanggang adonan terlihat indah. Kenwood - electric oven merupakan alat dapur elegan yang digunakan untuk memanggang sajian masakan seperti roti, pizza, dan kreasi masakan favorit Anda lainnya. Dengan hanya memasukkannya ke nampan kemudian mengatur waktu yang diperlukan, panggangan sudah selesai. Kemudahan, kualitas dan juga desain yang stylish inilah Halo Kopi merekomendasikan penggunaan oven canggih ini untuk kebutuhan di dapur rumah Anda.\n\nSpesifikasi :\nBrand : Kenwood\nKode : MO280\nDaya : 1100W\nBody Material : Metal\nDimensi (PxLxT) : 36 x 30 x 20 cm\nWeight : 2.9 kg\nCapacity : 10L\nGaransi : 1 Tahun\nFeatures :\nCompact\nThermostat temperature\nCrumb tray\nIndicator light', 3000, '', '', 5, 0, 0, '', '2021-11-01 08:10:26', ''),
+(60, 14, '1635750806-1.jpg,1635750806-2.jpg', 'Alat Seduh Manual Kopi Pour Over V02 (Set)', 1250000, 'Alat Seduh Manual Kopi Pour Over V02 (Set)\n\nSpesifikasi :\nMaterial case : EVA + 600D\nDimensi (PxLxT) : 56 x 28 x 16 cm\nTerdiri dari : \nScale\nManual grinder\nKettle\nCoffee dripper V02\nCoffee filter V02 - 100 pcs\nCoffee server 600ml\nMade in China', 1000, '', '', 5, 0, 3, 'flash sale', '2021-11-01 08:13:25', ''),
+(61, 14, '1635750958-1.jpg', 'DeLonghi - Breakfast Set A', 6550000, 'DeLonghi - Breakfast Set A', 5000, '', '', 5, 0, 0, '', '2021-11-01 08:15:58', ''),
+(62, 14, '1635751137-1.jpg,1635751137-2.jpg', 'Coffee Gifts - Cold Brew (Set 1)', 430000, 'Coffee Gifts - Cold Brew (Set 1)\n\nBerikan kejutan teramat bahagia pada para pecinta kopi di mana pun mereka berada. Coffee Gifts ini merupakan paket hadiah pilihan khusus untuk mereka yang menikmati tiap proses sajian kopi. Dikemas secara istimewa hanya untuk hari ini, momen terbaik untuk menghadiahkannya.', 1000, '', '', 5, 0, 0, '', '2021-11-01 08:18:56', ''),
+(63, 14, '1635751267-1.jpg,1635751267-2.jpg', 'Coffee Gifts - Cold Brew (Set 2)', 540000, 'Coffee Gifts - Cold Brew (Set 2)\n\nBerikan kejutan teramat bahagia pada para pecinta kopi di mana pun mereka berada. Coffee Gifts ini merupakan paket hadiah pilihan khusus untuk mereka yang menikmati tiap proses sajian kopi. Dikemas secara istimewa hanya untuk hari ini, momen terbaik untuk menghadiahkannya.', 1000, '', '', 5, 0, 0, '', '2021-11-01 08:21:06', ''),
+(64, 1, '1635751907-1.jpg,1635751907-2.jpg', 'Bali Kintamani 200g Kopi Arabica', 75000, 'Bali Kintamani 200g Kopi Arabica\n\nKopi yang berasal dari daerah Kintamani Bali nan sejuk ini memang memiliki keunikan cita rasa yang berbeda dari kopi di daerah lain di nusantara. Kopi Bali Kintamani memiliki cita rasa buah-buahan yang asam dan segar. Hal tersebut terjadi dikarenakan tanaman kopi di Bali Kintamani ditanam bersamaan dengan tanaman lain seperti aneka sayuran dan buah jeruk. Kopi jenis ini menggunakan sistem ‘tumpang sari’ bersama dengan jenis tanaman lain. Itu kenapa biji kopinya meresap rasa buah-buahan seperti jeruk. Selain memiliki cita rasa ‘buah’, kopi Bali Kintamani memiliki cita rasa yang lembut dan tidak berat. Keunikanya tersebut di dapat dari letak geografisnya yang unik juga. Bagi kamu yang menyukai cita rasa kopi berbeda, kopi Bali Kintamani bisa menjadi pilihan yang tepat. \n\nUntuk setiap bubuk kopi single origin yang dijual di Otten Coffee, semuanya digiling dengan memakai mesin penggiling Mahlkonig VTA 6S. Mesin ini memiliki conical burr yang terkenal dengan hasil gilingan yang presisi di setiap partikel gilingannya. Karenanya, kini para pelanggan setia Halo Kopi bisa memilih berbagai rentang pilihan level gilingan sesuai dengan kebutuhan masing-masing, mulai dari super fine hingga coarse.', 200, '', '', 10, 0, 0, '', '2021-11-01 08:31:47', ''),
+(65, 1, '1635752088-1.jpg,1635752088-2.jpg', 'Aceh Gayo Atu Lintang 200g Kopi Arabica', 65000, 'Aceh Gayo Atu Lintang 200g Kopi Arabica\n\nSiapa yang tidak kenal dengan kopi Aceh Gayo yang sudah tersohor kenikmatannya? Kopi yang berasal dari daerah Tanah Gayo Aceh Tengah ini menjadi salah satu jenis kopi yang paling banyak dikonsumsi masyarakat maupun yang diekspor ke luar negeri. Kopi Gayo memiliki ciri unik dengan kekhasan aroma yang berbeda dengan kopi-kopi lain di Indonesia. Kopi Gayo menghasilkan sebagian besar jenis kopi Arabika terbaik. Cita rasa kopi Gayo sendiri terasa lebih pahit dengan tingkat keasaman rendah. Aromanya yang sangat tajam menjadikan jenis kopi ini disukai. Tak heran kopi ini menjadi penghasil kopi terbesar di Asia. Meskipun rasanya pahit, kopi Gayo memberi aroma gurih pada setiap tegukan.\n', 200, '', '', 10, 0, 0, '', '2021-11-01 08:34:47', ''),
+(66, 1, '1635752252-1.jpg,1635752252-2.jpg', 'Bali Natural Process 200g Kopi Arabica', 95000, 'Bali Natural Process 200g Kopi Arabica\n\nUntuk setiap bubuk kopi single origin yang dijual di Halo Kopi semuanya digiling dengan memakai mesin penggiling Mahlkonig VTA 6S. Mesin ini memiliki conical burr yang terkenal dengan hasil gilingan yang presisi di setiap partikel gilingannya. Karenanya, kini para pelanggan setia Halo Kopi bisa memilih berbagai rentang pilihan level gilingan sesuai dengan kebutuhan masing-masing, mulai dari super fine hingga coarse.\n\nUntuk bahan rekomendasi:\nSuper fine: Turkish coffee\nFine: Espresso\nMedium fine: Mokapot\nMedium: Pour over (V60, Chemex, Kalita) syphon, Aeropress, Vietnam Drip\nMedium coarse: French press\nCoarse: Cold drip, cold brew', 200, '', '', 10, 0, 0, '', '2021-11-01 08:37:32', ''),
+(67, 1, '1635752408-1.jpg,1635752408-2.jpg', 'Cappuccino Del Italiano - Kopi House Blend 500gr', 90000, 'Cappuccino Del Italiano - Kopi House Blend 500gr\n\nCappuccino Del Italiano, rayakan cita rasa klasik sajian kopi susu berkelas khas cappuccino Italia. Dioptimalkan dengan tingkatan sangrai yang sesuai medium dark, merupakan rahasia karakter rasa eksklusif dari biji kopoi ini. Pengalaman meneguk kopi susu nikmat layaknya sajian kopi susu yang umum di kedai-kedai kopi Italia.\n\nJika Anda penikmat kopi susu yang mencintai karakter kopi yang klasik dengan susu berbusa lembut yang nikmat, maka pilihan terbaik untuk seduhan kopi susu di rumah adalah racikan biji kopi Cappuccino Del Italiano. Perpaduan 100% robusta premium yang tumbuh dan berasal dari kebun kopi di Bali, Garut dan Flores Manggarai. Kondisi alam 3 daerah kebun kopi itulah yang menjadi rahasia dari karakter rasa yang tercipta, Chocolate, Hazelnut, Vanilla, Velvety.\n\nSecara teliti diracik untuk semakin menikmati pengalaman meneguk kopi susu khas Italia, klasik yang berkelas. Selalu sediakan Cappuccino del Italiano di rumah ataupun penuhi kebutuhan kopi di kedai kopi Anda. Eksplorasi rasio favorit Anda, dan rasakan bagaimana biji kopi ini mengubah pengalaman minum kopi susu Anda.\nPersiapkan alat seduh favorit Anda, baik espresso maker untuk pecinta espresso rumahan atau pun mesin espresso manual bagi para barista profesional.\n\nGiling biji kopi pada tingkat kehalusan sesuai yang Anda inginkan, takar rasio kopi untuk proses seduh espresso\nNikmati tiap detail persiapan dan proses ekstraksi dari racikan berkualitas premium Cappuccino del Italiano dan temukan resep espresso nikmat andalan Anda.\nPadukan dengan susu segar sesuai keinginan Anda, kemudian teguk nikmat kopi susu seduhan nikmat.', 500, '', '', 10, 0, 0, '', '2021-11-01 08:40:07', '');
+
 -- --------------------------------------------------------
 
 --
@@ -159,7 +191,12 @@ INSERT INTO `invoice` (`idinvoice`, `id_iklan`, `id_user`, `jumlah`, `warna_i`, 
 (101, 27, 14, 2, '', '', 75000, 10, 'jne', 0, 'OKE', '2-3', 30000, '12456765432', '11,Jawa Timur', '444,Surabaya', 'Jl banyu urip', '2021-07-25 22:09:36', 'Selesai', '', '', '', '', 'BCA', '101-bukti-transfer.png', '2021-07-25 22:09:46', '2021-07-25 22:11:24', '2021-07-25 22:14:15', ''),
 (102, 29, 14, 1, '', '', 415000, 30, 'jne', 0, 'OKE', '2-3', 15000, '123456', '11,Jawa Timur', '444,Surabaya', 'Jl banyu urip', '2021-07-25 22:38:31', 'Selesai', '', '', '', '', 'BCA', '102-bukti-transfer.png', '2021-07-25 22:38:44', '2021-09-09 12:26:33', '2021-09-09 12:26:48', ''),
 (103, 20, 14, 1, '', '', 222000, 0, 'jne', 0, 'OKE', '2-3', 90000, '123', '11,Jawa Timur', '444,Surabaya', 'Jl banyu urip', '2021-07-25 23:27:20', 'Selesai', '', '', '', '', 'BCA', '103-bukti-transfer.png', '2021-07-25 23:27:32', '2021-09-09 12:26:21', '2021-09-09 12:26:44', ''),
-(105, 21, 14, 1, '', '', 15000000, 0, 'jne', 0, '', '', 0, '', '', '', '', '2021-09-09 12:44:57', 'Belum Bayar', '', '', '', '', '', '', '', '', '', '');
+(105, 21, 14, 1, '', '', 15000000, 0, 'jne', 0, '', '', 0, '', '', '', '', '2021-09-09 12:44:57', 'Belum Bayar', '', '', '', '', '', '', '', '', '', ''),
+(106, 44, 14, 1, '', '', 95000, 0, 'jne', 0, 'OKE', '3-5', 47000, '', '15,Kalimantan Timur', '89,Bontang', 'JL S Parman', '2021-11-01 06:07:09', 'Belum Bayar', '', '', '', '', '', '', '', '', '', ''),
+(107, 49, 20, 1, '', '', 18000000, 3, 'jne', 0, '', '', 0, '', '', '', '', '2021-11-01 09:36:53', 'Belum Bayar', '', '', '', '', '', '', '', '', '', ''),
+(108, 49, 14, 1, '', '', 18000000, 3, 'jne', 0, '', '', 0, '', '', '', '', '2021-11-01 09:54:20', 'Belum Bayar', '', '', '', '', '', '', '', '', '', ''),
+(109, 67, 14, 1, '', '', 90000, 0, 'jne', 0, 'OKE', '3-5', 47000, '', '15,Kalimantan Timur', '89,Bontang', 'JL S Parman', '2021-11-01 10:31:34', 'Belum Bayar', '', '', '', '', '', '', '', '', '', ''),
+(110, 67, 20, 1, '', '', 90000, 0, 'jne', 0, 'OKE', '3-5', 47000, '', '15,Kalimantan Timur', '89,Bontang', 'Jl s parman', '2021-11-01 10:46:30', 'Belum Bayar', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -178,11 +215,14 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`id`, `nama`, `icon`) VALUES
-(1, 'Kopi Bubuk', 'a47c2b01d7ad4191198a3de4768cde9c.png'),
-(2, 'Kopi Luwak', '2b0ab37e45307dc96785c3f67bd26661.png'),
-(3, 'Kopi Sangrai PREMIUM', '26742494755e9553b2b493198073d596.png'),
-(6, 'Kopi Sangrai Pasaran Umum', '3f82df789054b274afbab2e029084aca.png'),
-(12, 'Kopi Lokal Nusantara', 'dd7b409fc27effa5395fb658fcba81bc.svg');
+(1, 'Coffe', 'c4ffeb1b1a2a86581baada8a0c7b68fe.png'),
+(2, 'Coffe Tools', '1f65b611811c6080d43ce7824c071c78.png'),
+(3, 'Barista Tools', '21b80c8924c78bc8803f32b4a05ec667.png'),
+(6, 'Coffe Machine', '0a88c1b074de61b95c3a11a8bf4054f7.png'),
+(12, 'Grinders', '7dec276369b96ba78d8630cfd50af42a.png'),
+(13, 'Roaster & Others', 'f564ffda4a5fd783aea7c7d886492c8f.png'),
+(14, 'Bundling Set', 'a6633e641b281b9bb220480c928057b4.png'),
+(15, 'Kitchen Appliances', '44a5fecfee6fcad9ed3b3643846df894.png');
 
 -- --------------------------------------------------------
 
@@ -225,7 +265,9 @@ CREATE TABLE `lokasi_user` (
 --
 
 INSERT INTO `lokasi_user` (`idlokasi`, `id_user`, `provinsi`, `id_provinsi`, `kota`, `id_kota`, `kecamatan`, `kelurahan`, `alamat_lengkap`) VALUES
-(9, 3, 'Jawa Timur', 11, 'Surabaya', 444, '', '', 'Jl banyu urip');
+(9, 3, 'Jawa Timur', 11, 'Surabaya', 444, '', '', 'Jl banyu urip'),
+(10, 14, 'Kalimantan Timur', 15, 'Bontang', 89, '', '', 'JL S Parman'),
+(11, 20, 'Kalimantan Timur', 15, 'Bontang', 89, '', '', 'Jl s parman');
 
 -- --------------------------------------------------------
 
@@ -415,7 +457,7 @@ CREATE TABLE `setting_apikey` (
 --
 
 INSERT INTO `setting_apikey` (`id_apikey`, `google_client_id`, `google_client_secret`, `midtrans_client_key`, `midtrans_server_key`, `rajaongkir_key`) VALUES
-(1, '667755539556-t91a5rigvs8sjn8ov5ob449uofahvjdf.apps.googleusercontent.com', 'egHGBI5BcztK-VbZNeCEHHTW', 'SB-Mid-client-rwRR5kz4E-kNnJs2', 'SB-Mid-server-iU7JbDaoVDjBJu4N-LLH0xW8', '1cb6ca038ddb281f174dbc4264474df0');
+(1, '790743961937-r4dggoinbott1fr3lo2dfb6hu26pfq4c.apps.googleusercontent.com', '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', 'SB-Mid-client-2Um3YUABSlMSWTjS', 'SB-Mid-server-2w7zG-N563RzB-pgbCu6ziAf', '5173efd45a839016b39a9775a82c229e');
 
 -- --------------------------------------------------------
 
@@ -505,7 +547,7 @@ CREATE TABLE `setting_lokasi` (
 --
 
 INSERT INTO `setting_lokasi` (`id`, `provinsi`, `kota`, `provinsi_id`, `kota_id`) VALUES
-(1, 'Bali', 'Denpasar', 1, 114);
+(1, 'Jawa Timur', 'Malang', 11, 255);
 
 -- --------------------------------------------------------
 
@@ -524,8 +566,8 @@ CREATE TABLE `setting_pembayaran` (
 --
 
 INSERT INTO `setting_pembayaran` (`id`, `tipe`, `status`) VALUES
-(1, 'Midtrans', ''),
-(2, 'Manual', 'active');
+(1, 'Midtrans', 'active'),
+(2, 'Manual', '');
 
 --
 -- Indexes for dumped tables
@@ -641,7 +683,7 @@ ALTER TABLE `setting_pembayaran`
 -- AUTO_INCREMENT untuk tabel `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `banner_promo`
@@ -659,19 +701,19 @@ ALTER TABLE `flashsale`
 -- AUTO_INCREMENT untuk tabel `iklan`
 --
 ALTER TABLE `iklan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT untuk tabel `invoice`
 --
 ALTER TABLE `invoice`
-  MODIFY `idinvoice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `idinvoice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `keranjang`
@@ -683,7 +725,7 @@ ALTER TABLE `keranjang`
 -- AUTO_INCREMENT untuk tabel `lokasi_user`
 --
 ALTER TABLE `lokasi_user`
-  MODIFY `idlokasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idlokasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `nomor_rekening`

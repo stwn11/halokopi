@@ -15,7 +15,7 @@ $google_client->setClientId($google_client_id);
 $google_client->setClientSecret($google_client_secret);
 
 //Set the OAuth 2.0 Redirect URI
-$google_client->setRedirectUri($url . 'login/');
+$google_client->setRedirectUri($url . 'login');
 
 //
 $google_client->addScope('email');

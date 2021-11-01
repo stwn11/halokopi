@@ -8,12 +8,12 @@ if (empty($_POST['token_id'])) {
     die('Empty token_id!');
 }
 
-Config::$serverKey = '<your server key>';
+Config::$serverKey = 'SB-Mid-server-2w7zG-N563RzB-pgbCu6ziAf';
 // Uncomment for append and override notification URL
 // Config::$appendNotifUrl = "https://example.com";
 // Config::$overrideNotifUrl = "https://example.com";
 
-if (strpos(Config::$serverKey, 'your ') != false ) {
+if (strpos(Config::$serverKey, 'SB-Mid-server-2w7zG-N563RzB-pgbCu6ziAf') != false ) {
     echo "<code>";
     echo "<h4>Please set your server key from sandbox</h4>";
     echo "In file: " . __FILE__;

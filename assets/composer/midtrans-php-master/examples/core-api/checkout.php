@@ -6,9 +6,9 @@ require_once dirname(__FILE__) . '/../../Midtrans.php';
 
 // YOUR CLIENT KEY
 // can find in Merchant Portal -> Settings -> Access keys
-Config::$clientKey = "<your client key>";
+Config::$clientKey = "SB-Mid-client-2Um3YUABSlMSWTjS";
 
-if (strpos(Config::$clientKey, 'your ') != false ) {
+if (strpos(Config::$clientKey, 'SB-Mid-client-2Um3YUABSlMSWTjS') != false ) {
     echo "<p style='background: #FFB588; padding: 10px;'>";
     echo "Please set your client key in file " . __FILE__;
     echo "</p>";

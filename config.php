@@ -3,7 +3,7 @@ session_start();
 
 // GLOBAL URL
 //Masukkan url domain utama dengan http / https
-$url = "http://localhost/halokopi/";
+$url = "http://4ac6-36-85-152-125.ngrok.io/halokopi/";
 
 // CONNECT SERVER
 $server = new mysqli(
